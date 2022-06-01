@@ -8,7 +8,7 @@ from bot.core import GROUP_ID
 def phone_is_valid(value):
     import re
     is_number = bool(re.match('^[0-9]+$', value))
-    if is_number:
+    if is_number and str(value).startswith('98') or str(value).startswith('918') or str(value).startswith('94'):
         fetcher = Fetcher()
         res = fetcher.get_phone(value)
         return res
